@@ -1,0 +1,37 @@
+{
+  "name": "dsh-image-gen",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: image generation via OpenAI-compatible /images/generations endpoints. Adds a 「生图」 header chip with a settings panel (providers, models, quick test). Config persists host-side at ~/.dsh/image-gen-config.json.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "image-generation",
+    "cogview",
+    "minimax"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}
